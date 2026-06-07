@@ -27,4 +27,9 @@ public class DepartmentController {
         DepartmentDto departmentDto = departmentService.getDepartmentByCode(departmentCode);
         return new ResponseEntity<>(departmentDto, HttpStatus.OK);
     }
+
+    @GetMapping("hello")
+    public ResponseEntity<String> getHello(){
+        return new ResponseEntity<>(departmentService.getHello(), HttpStatus.OK);
+    }
 }
